@@ -1,6 +1,6 @@
 // src/components/Home.js
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import ReactLight from '../assets/svg/react-light.svg';
 import VueIcon from '../assets/svg/vue.svg';
 import AngularIcon from '../assets/svg/angular.svg';
@@ -14,7 +14,6 @@ const Home = () => {
   const [isHoveredTailwind, setIsHoveredTailwind] = useState(false);
   const [isHoveredFlutter, setIsHoveredFlutter] = useState(false);
 
-
   return (
     <div className='py-10 bg-primary'>
       <div>
@@ -25,7 +24,7 @@ const Home = () => {
         <div className='flex justify-center space-x-3'>
           {/* Item 1 */}
           <div
-            className={`border bg-white p-8 rounded-lg cursor-pointer grid content-center ${isHovered ? ' hover:border-white' : ''}`}
+            className={`border bg-white p-8 rounded-lg cursor-pointer flex ${isHovered ? ' hover:border-white' : ''}`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
@@ -35,12 +34,22 @@ const Home = () => {
               transition={{ duration: 0.3 }}
             >
               <img src={ReactLight} alt='React' className='h-[50px]' />
-              {isHovered && (
-                <div className="ml-2 px-2 text-gray-600 text-start w-[600px]">
-                  <p >Saya memahami sedikit tentang React, Namun hanya sebatas slicing style dan membuat component sederhana. tetapi saya akan terus belajar dan memahami React lebih dalam lagi. </p>
-                </div>
-              )}
+
+
             </motion.div>
+            <AnimatePresence>
+              {isHovered && (
+                <motion.div
+                  initial={{ opacity: 0, x: 10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 10 }}
+                  transition={{ duration: 0.3 }}>
+                  <div className="ml-2 px-2 text-gray-600 text-start w-[600px]">
+                    <p >Saya memahami sedikit tentang React, Namun hanya sebatas slicing style dan membuat component sederhana. tetapi saya akan terus belajar dan memahami React lebih dalam lagi. </p>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
           {/* Item 2 */}
           <div
