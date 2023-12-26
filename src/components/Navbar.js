@@ -10,13 +10,13 @@ const Navbar = () => {
           <div className="text-gray-600 font-bold text-2xl">Akbar.</div>
           <div className="flex items-center">
             <div className="mr-6">
-              <a className="text-gray-600 hover:text-gray-800" href="/">Home</a>
+              <a className="text-gray-600 hover:text-primary" href="/">Home</a>
             </div>
             <div className="mr-6">
-              <a className="text-gray-600 hover:text-gray-800" href="/about">About</a>
+              <a className="text-gray-600 hover:text-primary" href="/about">About</a>
             </div>
             <div className="mr-6">
-              <a className="text-gray-600 hover:text-gray-800" href="/contact">Contact</a>
+              <a className="text-gray-600 hover:text-primary" href="/contact">Contact</a>
             </div>
           </div>
           <div className="flex items-center">
