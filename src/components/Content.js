@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import CSIRTImage from '../assets/png/landingpagecsirt.png';
 import CSRPusakaImage from '../assets/png/landingpagecsrpusaka.png';
 import EOffice from '../assets/png/landingpageeoffice.png';
