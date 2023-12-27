@@ -21,7 +21,7 @@ const Home = () => {
         <h1 className='text-4xl font-semibold'>What can I do?</h1>
       </div>
       <div className='py-5'>
-        <div className='flex justify-center space-x-3'>
+        <div className='flex flex-wrap justify-center min-[412px]:space-x-5 space-x-0 min-[660px]:gap-0 gap-3'>
           {/* Item 1 */}
           <div
             className={`border bg-white p-8 rounded-lg cursor-pointer flex ${isHovered ? ' hover:border-white' : ''}`}

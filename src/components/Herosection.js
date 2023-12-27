@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 
 const Home = () => {
     return (
-        <div className='flex justify-between items-center px-20 border'>
+        <div className='md:flex md:justify-between grid md:py-0 py-20 items-center px-20 border'>
             <div className='text-start space-y-2'>
                 <motion.h1
                     className='text-4xl font-bold'

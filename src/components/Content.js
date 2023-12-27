@@ -10,10 +10,10 @@ const Content = () => {
     return (
         <div>
             <div className='py-10'>
-                <h1 >LAST PROJECT</h1>
-                <h1 className='text-4xl font-semibold'>What have I done?</h1>
-                <div className="p-10 space-y-5">
-                    <div className="flex space-x-5">
+                <h1 className='text-2xl md:text-4xl font-semibold'>LAST PROJECT</h1>
+                <h1 className='text-4xl md:text-6xl font-semibold'>What have I done?</h1>
+                <div className="p-4 md:p-10 space-y-5 md:space-y-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                         <div className="transition duration-300 ease-in-out delay-75 hover:scale-110">
                             <div className="group space-y-1 grid content-center justify-items-center relative ">
                                 <img src={CSIRTImage} alt="csirt" className="h-[200px] rounded-lg" />
