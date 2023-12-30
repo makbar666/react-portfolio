@@ -81,7 +81,7 @@ const Navbar = () => {
                       exit={{ opacity: 0, x: -10 }}
                       transition={{ duration: 0.3 }}
                       whileHover={{ scale: 1.1 }}
-                      onClick={() => handleIconClick('https://www.instagram.com/')}
+                      onClick={() => handleIconClick('https://www.instagram.com/m.akbar1802')}
                     >
                       <FaInstagram size={24} />
                     </motion.div>
@@ -94,7 +94,7 @@ const Navbar = () => {
                       exit={{ opacity: 0, x: -10 }}
                       transition={{ duration: 0.3 }}
                       whileHover={{ scale: 1.1 }}
-                      onClick={() => handleIconClick('https://www.instagram.com/')}
+                      onClick={() => handleIconClick('https://wa.me/+6285254099133')}
                     >
                       <FaWhatsapp size={24} />
                     </motion.div>
@@ -107,7 +107,7 @@ const Navbar = () => {
                       exit={{ opacity: 0, x: -10 }}
                       transition={{ duration: 0.3 }}
                       whileHover={{ scale: 1.1 }}
-                      onClick={() => handleIconClick('https://www.instagram.com/')}
+                      onClick={() => handleIconClick('mailto:muhakbar1820@gmail.com')}
                     >
                       <FaRegEnvelope size={24} />
                     </motion.div>
