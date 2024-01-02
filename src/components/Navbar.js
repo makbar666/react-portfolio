@@ -58,11 +58,7 @@ const Navbar = () => {
               <a className="text-gray-600 hover:text-primary" href="/contact">Contact</a>
             </div>
           </div>
-          <div className="flex items-center space-x-2">
-            <div className=''>
-
-
-            </div>
+          <div className="md:flex hidden items-center space-x-2 ">
             {/* Tombol Contact Us */}
             <div
               className='cursor-pointer border hover:border-primary hover:bg-primary text-gray-600 font-bold py-2 px-4 rounded-md transition duration-300 ease-in-out'
