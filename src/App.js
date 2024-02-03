@@ -1,28 +1,30 @@
 
 import './App.css';
-import Home from './components/Home';
 import Navbar from './components/Navbar';
-import HeroSection from './components/Herosection';
-import Content from './components/Content';
 import Footer from './components/Footer';
-import About from './components/About';
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Project from './components/Project';
+import HomePage from './components/HomePage';
+
 
 function App() {
   return (
-    <div className="App">
-      <header>
-        <Navbar />
-      </header>
-      <main>
-        <HeroSection />
-        <Home />
-        <Content />
-        <About />
+    <Router>
+      <div className="App">
+        <header>
+          <Navbar />
+        </header>
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/project" element={<Project />} />
+          </Routes>
+        </main>
         <Footer />
-      </main>
-    </div>
+      </div>
+    </Router>
+
+
   );
 }
 

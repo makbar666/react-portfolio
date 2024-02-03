@@ -3,16 +3,16 @@ import React, { useState } from 'react';
 import HeroIcon from '../assets/svg/hero-section.svg';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaInstagram, FaWhatsapp, FaRegEnvelope } from 'react-icons/fa'; // Import ikon sesuai kebutuhan
+import Typewriter from 'typewriter-effect';
+
 
 const Home = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     const handleButtonClick = () => {
-        // Logika atau aksi yang ingin dilakukan saat tombol diklik
     };
 
     const handleIconClick = (iconLink) => {
-        // Logika atau aksi yang ingin dilakukan saat ikon diklik
         window.open(iconLink, '_blank');
     };
 
@@ -21,12 +21,19 @@ const Home = () => {
             <div className='text-start space-y-2'>
                 <motion.h1
                     className='text-4xl font-bold'
-                    initial={{ opacity: 0, x: 50 }} // Properti awal saat muncul
-                    transition={{ duration: 0.5 }} // Durasi animasi
-                    animate={{ opacity: 10, x: 0 }} // Animasi saat muncul
-                    exit={{ opacity: 0, y: -50 }} // Animasi saat komponen keluar
+                    initial={{ opacity: 0, x: 50 }}
+                    transition={{ duration: 0.5 }}
+                    animate={{ opacity: 10, x: 0 }}
+                    exit={{ opacity: 0, y: -50 }}
                 >
-                    Hi there, I'm Akbar.
+                    <Typewriter
+                        onInit={(typewriter) => {
+                            typewriter.typeString('Hi there!, I am Akbar.')
+                                .callFunction(() => {
+                                })
+                                .start();
+                        }}
+                    />
                 </motion.h1>
                 <motion.p
                     className='text-gray-500 text-lg'
@@ -94,7 +101,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className=''>
+            <div className='hover:scale-110 transition duration-300 ease-in-out'>
                 <motion.img
                     src={HeroIcon}
                     alt='akbar'

@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import BaseButton from './buttons/BaseButton';
 import { FaInstagram, FaWhatsapp, FaRegEnvelope } from 'react-icons/fa'; // Import ikon sesuai kebutuhan
+// import { Link } from 'react-router-dom';
+
 
 
 const Navbar = () => {
@@ -47,7 +49,7 @@ const Navbar = () => {
       <div className="container mx-auto">
         <div className="flex items-center justify-between md:px-0 px-10" >
           <div className="text-gray-600 font-bold text-2xl">Akbar.</div>
-          <div className="hidden md:flex items-center"> {/* Tampilkan pada layar medium dan lebih besar */}
+          <div className="hidden md:flex items-center">
             <div className="mr-6">
               <a className="text-gray-600 hover:text-primary" href="/">Home</a>
             </div>
