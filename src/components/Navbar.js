@@ -31,17 +31,15 @@ const Navbar = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleButtonClick = () => {
-    // Logika atau aksi yang ingin dilakukan saat tombol diklik
   };
 
   const handleIconClick = (iconLink) => {
-    // Logika atau aksi yang ingin dilakukan saat ikon diklik
     window.open(iconLink, '_blank');
   };
 
   return (
     <motion.nav
-      className={`w-full py-5 transition-all duration-300 ${isNavbarFixed ? 'fixed top-0 bg-white shadow-sm' : ''}`}
+      className={`w-full py-5 transition-all duration-300 shadow-sm z-50 ${isNavbarFixed ? 'fixed top-0 bg-white shadow-sm' : ''}`}
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -50 }}

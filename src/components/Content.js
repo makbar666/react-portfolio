@@ -11,7 +11,7 @@ const Content = () => {
 
     return (
         <div>
-            <div className='py-10'>
+            <div className='py-10 z-0 relative'>
                 <h1 className='text-sm  font-semibold'>LAST PROJECT</h1>
                 <h1 className='text-4xl  font-semibold'>What have I done?</h1>
                 <div className="p-4 md:p-10 space-y-5 md:space-y-10">
@@ -62,7 +62,6 @@ const Content = () => {
                         </div>
                     </div>
                     <div>
-
                         <Link to='/project'>
                             <BaseButton text='See More' >
                             </BaseButton>
